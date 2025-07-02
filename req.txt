@@ -1,0 +1,22 @@
+# Quantum simulation
+qutip==5.0.2
+pennylane==0.35.1
+
+# Classical math + chaos
+numpy==1.26.4
+scipy==1.13.1
+mpmath==1.3.0     # High-precision for logistic/Lorenz/Chen maps
+
+# ML + Neural networks
+torch==2.3.0
+scikit-learn==1.5.0
+
+# Error correction (LDPC codes)
+pyldpc
+
+# Plotting + Visualization
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Randomness testing
+bitstring==4.1.3
