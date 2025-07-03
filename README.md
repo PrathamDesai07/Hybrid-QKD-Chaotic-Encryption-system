@@ -3,7 +3,52 @@ A complete multi-phase simulation of a hybrid quantum-classical encryption pipel
 
 ---
 
+## 🔐 1. BB84 Protocol (Quantum Key Distribution)
+The **BB84 protocol** is a quantum-safe cryptographic scheme used to generate a shared secret key between two parties over an insecure quantum channel. It exploits the **no-cloning theorem** and the nature of **quantum measurements** to detect the presence of an eavesdropper.
+
+We simulate:
+* **Photon loss and depolarization**
+* **Error correction** using **LDPC codes**
+* **Privacy amplification** to distill the final key
+
+## 🧠 2. Chaotic Encryption
+Chaos theory allows generation of **deterministic yet unpredictable sequences**, ideal for secure encryption. We use:
+* **Chaotic Maps** (e.g., Chen, Rossler) for generating keystreams
+* **Logistic Maps** for virtual noise masking
+* **Feedback-Chaos Systems** for adaptive encryption
+
+These systems mimic randomness and are sensitive to initial conditions, making reverse-engineering extremely difficult.
+
+## 🤖 3. Machine Learning-based Map Selection (Phase‑6A)
+We introduce **ML classification** to select the optimal chaotic map based on estimated **Quantum Bit Error Rate (QBER)**. This allows dynamic adaptation of encryption strategy based on channel conditions, increasing robustness.
+
+## 🔁 4. GRU-based Keystream Generator (Phase‑6B)
+A **GRU (Gated Recurrent Unit)** neural network is trained on chaotic sequences to **learn and replicate** non-linear chaotic behavior. This adds a layer of **AI-driven unpredictability** in keystream generation, further enhancing security.
+
+## 🎲 5. Virtual Noise Layer (Phase‑6C)
+A **logistic map** is used to generate a byte-level noise mask, which is added to the plaintext before encryption and removed after decryption. This introduces non-linearity and deters chosen-plaintext attacks.
+
+## 🔄 6. Classical Cipher (Phase‑7)
+After keystream generation:
+* The plaintext is **scrambled**
+* Masked using **virtual noise**
+* Whitened using SHA-256
+* Encrypted using a **2-round XOR cipher**
+* Authenticated via **HMAC-SHA256**
+
+We also simulate **attack models** like Intercept-Resend and Photon Splitting, plotting their impact on QBER.
+
+## 🧪 System Goals
+* Provide **quantum-resilient encryption**
+* Ensure high **avalanche effect** and **bit-level unpredictability**
+* Dynamically adapt to changing channel conditions via ML
+* Maintain **low BER**, secure HMAC authentication, and **high randomness** in keystream
+
+---
+
 ## 📌 Overview
+This project combines **Quantum Key Distribution (QKD)** principles with **chaotic encryption** and **machine learning-based dynamic keystream adaptation** to create a **hybrid cryptographic system** that is resilient to both classical and quantum attacks.
+
 This system simulates all phases from quantum key generation to final encrypted communication.
 
 ### 🧩 Phases:
@@ -74,7 +119,6 @@ python main.py
 | **Monobit Test** | Checks keystream balance (0.5 mean)           |
 | **QBER Graphs**  | Show impact of attacks and losses             |
 
----
 
 ---
 
@@ -88,10 +132,11 @@ python main.py
 
 ## 👤 Author
 **Pratham Desai**
+📧 [pratham@example.com](mailto:prathamdesai071204@gmail.com)
+🔗 [LinkedIn](https://linkedin.com/in/your-profile)
+🔗 [GitHub](https://github.com/PrathamDesai07)
 
 ---
 
 ## 📜 License
 MIT License – see `LICENSE` file.
-
-> ⚠️ For academic use only – not suitable for production-grade cryptographic security.
