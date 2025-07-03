@@ -76,21 +76,6 @@ python main.py
 
 ---
 
-## 📒 Phase 8: Report Deliverables
-* ✅ Technical documentation
-* ✅ System diagram
-* ✅ Plots and metrics
-* ✅ Supervisor Summary (one-pager)
-* ✅ Full code with comments
-
-📁 Suggested folders for report:
-```
-/qkd/        → BB84 protocol implementation  
-/chaos/      → Chaotic maps, parameters  
-/ml/         → ML models and training utils  
-/analysis/   → Result graphs and evaluation code  
-```
-
 ---
 
 ## 📚 References
