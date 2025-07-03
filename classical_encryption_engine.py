@@ -49,7 +49,7 @@ def encrypt(plaintext_bytes, keystream_bits):
     xor_keystream = keystream_bits[n_blocks:n_blocks + len(padded_bits)]
 
     blocks = padded_bits.reshape((n_blocks, BLOCK_SIZE_BITS))
-    xor_bits = xor_keystream.reshape((n_blocks, BLOCK_SIZE_BITS))
+    xor_bits = np.array(xor_keystream).reshape((n_blocks, BLOCK_SIZE_BITS))
 
     permuted_blocks = blocks[permutation_indices]
     cipher_blocks = np.bitwise_xor(permuted_blocks, xor_bits)
@@ -67,7 +67,7 @@ def decrypt(ciphertext_bytes, keystream_bits, permutation_indices, pad_len):
     n_blocks = len(ciphertext_bits) // BLOCK_SIZE_BITS
 
     xor_keystream = keystream_bits[n_blocks:n_blocks + len(ciphertext_bits)]
-    xor_bits = xor_keystream.reshape((n_blocks, BLOCK_SIZE_BITS))
+    xor_bits = np.array(xor_keystream).reshape((n_blocks, BLOCK_SIZE_BITS))
     cipher_blocks = ciphertext_bits.reshape((n_blocks, BLOCK_SIZE_BITS))
 
     # XOR back
