@@ -1,16 +1,12 @@
-```markdown
 # 🔐 Hybrid-QKD-Chaotic-Encryption-System
-
 A complete multi-phase simulation of a hybrid quantum-classical encryption pipeline. This project integrates Quantum Key Distribution (QKD) with chaotic maps, machine learning, GRU-based keystream generation, and classical cryptographic techniques.
 
 ---
 
 ## 📌 Overview
-
 This system simulates all phases from quantum key generation to final encrypted communication.
 
 ### 🧩 Phases:
-
 | Phase | Description                                      |
 |-------|--------------------------------------------------|
 | 1     | BB84-based Quantum Key Distribution (QKD)        |
@@ -25,26 +21,23 @@ This system simulates all phases from quantum key generation to final encrypted 
 ---
 
 ## 🗂️ Repository Structure
-
 ```
-
 Hybrid-QKD-Chaotic-Encryption-System/
 ├── main.py                          # Full Phase-7 integration
-├── bb84\_pipeline.py                # BB84 QKD core logic
-├── classical\_encryption\_engine.py  # Custom symmetric cipher engine
-├── feedback\_chaos.py               # Feedback-chaotic stream generator
-├── gru\_keystream.py                # GRU-based keystream
-├── ml\_map\_selection.py             # ML-based chaotic map selector
-├── virtual\_noise\_layer.py          # Noise masking & unmasking
-├── final\_key.npy                   # Shared secret key
-├── gru\_chaotic\_model.pth           # Saved PyTorch GRU model
-├── attack\_qber.png                 # Bar graph of attack QBERs
-├── qber\_vs\_loss.png                # Line plot for QBER vs loss
-├── req.txt                         # Requirements list
+├── bb84_pipeline.py                 # BB84 QKD core logic
+├── classical_encryption_engine.py   # Custom symmetric cipher engine
+├── feedback_chaos.py                # Feedback-chaotic stream generator
+├── gru_keystream.py                 # GRU-based keystream
+├── ml_map_selection.py              # ML-based chaotic map selector
+├── virtual_noise_layer.py           # Noise masking & unmasking
+├── final_key.npy                    # Shared secret key
+├── gru_chaotic_model.pth            # Saved PyTorch GRU model
+├── attack_qber.png                  # Bar graph of attack QBERs
+├── qber_vs_loss.png                 # Line plot for QBER vs loss
+├── req.txt                          # Requirements list
 ├── LICENSE
-└── README.md                       # This file
-
-````
+└── README.md                        # This file
+```
 
 ---
 
@@ -54,22 +47,19 @@ Hybrid-QKD-Chaotic-Encryption-System/
 ```bash
 git clone https://github.com/your-username/Hybrid-QKD-Chaotic-Encryption-System.git
 cd Hybrid-QKD-Chaotic-Encryption-System
-````
+```
 
 ### 2. Install Dependencies
-
 ```bash
 pip install -r req.txt
 ```
 
 ### 3. Execute Simulation
-
 ```bash
 python main.py
 ```
 
 ### Output:
-
 * `qber_vs_loss.png`: Channel loss vs QBER curve
 * `attack_qber.png`: Simulated attack QBERs
 * Console output: BER, Avalanche effect, Monobit test
@@ -77,7 +67,6 @@ python main.py
 ---
 
 ## 📊 Output Metrics
-
 | Metric           | Description                                   |
 | ---------------- | --------------------------------------------- |
 | **BER**          | Bit Error Rate (post-decryption)              |
@@ -88,7 +77,6 @@ python main.py
 ---
 
 ## 📒 Phase 8: Report Deliverables
-
 * ✅ Technical documentation
 * ✅ System diagram
 * ✅ Plots and metrics
@@ -96,7 +84,6 @@ python main.py
 * ✅ Full code with comments
 
 📁 Suggested folders for report:
-
 ```
 /qkd/        → BB84 protocol implementation  
 /chaos/      → Chaotic maps, parameters  
@@ -107,7 +94,6 @@ python main.py
 ---
 
 ## 📚 References
-
 * Bennett & Brassard (1984) — BB84 Quantum Cryptography
 * Baptista (1998) — Chaos-based secure communication
 * Cho et al. (2014) — Gated Recurrent Units (GRU)
@@ -116,23 +102,11 @@ python main.py
 ---
 
 ## 👤 Author
-
 **Pratham Desai**
-📧 [pratham@example.com](mailto:pratham@example.com)
-🔗 [LinkedIn](https://linkedin.com/in/your-profile)
-🔗 [GitHub](https://github.com/your-username)
 
 ---
 
 ## 📜 License
-
 MIT License – see `LICENSE` file.
 
 > ⚠️ For academic use only – not suitable for production-grade cryptographic security.
-
-```
-
----
-
-Let me know if you’d like to include a `.pdf` for Phase 8 or an auto-generated summary script.
-```
